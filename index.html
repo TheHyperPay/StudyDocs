@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>포트폴리오 문서</title>
+        <meta charset="UTF-8">
+        <link href="index.css" rel="stylesheet" type="text/css"> 
+        <nav>
+            <a id="Search" href="#">
+                <img src="image/search.svg" alt="검색" width="50px" height="50px" 
+                style="margin: 23px 20px 17px 0px; float: right;">
+            </a>
+            <input id="Content" onchange="cont()" placeholder=" Search..." type="text" style="float: right;">
+            <select id="Language" onchange="langu()" style="float: right;">
+                <option value="/cpp">C++</option>
+                <option value="/python">Python</option>
+                <option value="/csandunity">C#/Unity</option>
+            </select>
+        </nav>
+        <script>
+            let docsLang;
+            let docsCont;
+
+            docsLang=document.getElementById("Language").value="";
+            function langu()
+            {
+                docsLang=document.getElementById("Language").value;
+                change();
+            }
+            function cont()
+            {
+                docsLang=document.getElementById("Language").value;
+                change();
+            }
+            function change()
+            {
+                document.getElementById("Search").href=docsLang+"/"+docsCont+".html";
+            }
+        </script>
+    </head>
+    <body>
+        <div id="Content">
+            <section id="navigation">
+
+            </section>
+
+            <section id="viewer">
+                <p class="textTitle">프로그래밍 가이드</p>
+                <details>
+                    <summary class="textSubTitle">문서 소개</summary>
+                    <p class="textContent">
+                        이 사이트는 각종 프로그래밍 언어에 관하여 요약정리를 해놓은 곳입니다.<br/>
+                        개인적인 목적으로 만들었으나 웹사이트로 만들어서 공개적으로 배포를 하면 관리가 수월해질 것으로 예상이 되어 이런 식으로 만들었습니다.<br/>
+                    	<br/>혹여나 문서 내용 중 오타나 내용 오류, 업데이트로 인한 문법 수정 등이 발견되면,<br/>
+                        <strong>gkfldys1276@yandex.com</strong><br/>
+                        으로 메일을 보내주시면 감사하겠습니다.
+                    </p>
+                </details>
+            </section>
+        </div>
+    </body>
+</html>
